@@ -28,7 +28,7 @@ X_train, y_train = np.array(X_train), np.array(y_train)
 
 # Reshaping
 X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1], 1))
-
+#                              no of rows........timestep.........features
 
 
 # Part 2 - Building the RNN
@@ -62,6 +62,8 @@ regressor.add(Dropout(0.2))
 regressor.add(Dense(units = 1))
 
 # Compiling the RNN
+# instead of adam we could also have used rmsprop as the optimizer
+# This is a regression problem so we use mean_squared_error, in case of classification we could have used binary cross entropy or categorical cross entropy
 regressor.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
 # Fitting the RNN to the Training set
