@@ -5,7 +5,7 @@ Here LSTM layers has been used for the analysis.
 # LSTM
 Long Short-Term Memory (LSTM) models are a type of recurrent neural network capable of learning sequences of observations.
 
-This may make them a network well suited to time series forecasting.
+This makes them a network well suited to time series forecasting.
 
 An issue with LSTMs is that they can easily overfit training data, reducing their predictive skill.
 
